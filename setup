@@ -1,0 +1,8 @@
+@author Mark Pajak
+
+this folder contains the shell scripts used to download the digital signage application and media from a server. 
+
+To download the files run signStart.sh
+To add run this script automatically on power up type "startup applications" in the search box.
+
+give the sign a unique name and add it to settings.JSON - this will give you the option to remotely trigger a whole app download. The default behaviour is to download just the media and data for the digital sign.
