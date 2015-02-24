@@ -1,4 +1,6 @@
-#Data loader scripts for a digital sign web app running of a local file system
+#Data loader scripts for a web app running on a local file system
+
+Used for digital signage at Bristol Museums, Galleries and Archives
 
 bash scripts running on Ubuntu
 
