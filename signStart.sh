@@ -21,15 +21,15 @@ exec $1&
 
 
 #get latest update instructions
-curl "https://dl.dropboxusercontent.com/u/244902320/Digital%20Signage/scripts/update.JSON" -o "/home/signagepc1/scripts/update.JSON" --insecure
+curl "https://dl.dropboxusercontent.com/u/244902320/Digital%20Signage/scripts/update.JSON" -o "$HOME/scripts/update.JSON" --insecure
 
 #check what the update command is
-UpdateCommand=$(grep -Po '(?<="updateCommand": ")[^"]*' /home/signagepc1/scripts/update.JSON)
+UpdateCommand=$(grep -Po '(?<="updateCommand": ")[^"]*' $HOME/scripts/update.JSON)
 
-machineName=$(grep -Po '(?<="machineName": ")[^"]*' /home/signagepc1/scripts/settings.JSON)
+machineName=$(grep -Po '(?<="machineName": ")[^"]*' $HOME/scripts/settings.JSON)
 echo "$machineName"
 
-command="ALL"
+command="all"
 
 if [ "$UpdateCommand" = "$command"  ]; then 
     echo "update whole app" >>updatelog
@@ -40,7 +40,7 @@ elif [ "$UpdateCommand" = "$machineName"  ];then
  echo "one off update starting" >>updatelog
 sh SignDownload.sh
 
-elif  [ ! -d "/home/signagepc1/Desktop/Digisign" ]; then
+elif  [ ! -d "$HOME/Desktop/Digisign" ]; then
 
  echo "cant find folder - downloading whole app " >>updatelog
 sh SignDownload.sh
