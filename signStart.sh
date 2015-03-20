@@ -1,5 +1,8 @@
 #!/bin/sh
-cd /home/signagepc1/scripts
+#author Mark Pajak (Bristol Museums Galleries and Archives)
+# this script controls the download and startup of the digital signage
+
+cd $HOME/scripts
 time=$(date +%d%m%k%M)
 echo "sign update script started on $time" >>updatelog
 
