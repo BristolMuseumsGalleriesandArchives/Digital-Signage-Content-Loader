@@ -1,3 +1,5 @@
+# author Mark Pajak (Bristol Museums Galleries and Archives)
+# this script downloads and unzips the entire digital signage application
 
 time=$(date +%k%M)
 time=$(date +%k%M)
