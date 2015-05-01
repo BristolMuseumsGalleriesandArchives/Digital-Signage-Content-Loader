@@ -1,6 +1,3 @@
-# author: Mark Pajak
-# this script extracts events data and images only from the zipped digital signage folder. 
-
 
 time=$(date +%k%M)
 time=$(date +%k%M)
